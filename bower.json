@@ -1,6 +1,22 @@
 {
-  "name": "package",
+  "name": "Houston",
   "version": "0.0.0",
-  "dependencies": {}
+  "homepage": "thisishouston.co",
+  "authors": [
+    "Alan Laidlaw <alanlaidlaw@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "scrollReveal.js": "~2.0.2",
+    "jquery": "~2.1.1"
+  }
 }
-
