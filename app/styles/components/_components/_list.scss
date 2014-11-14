@@ -19,7 +19,7 @@ ul li {
   padding-left: 16px;
   @include bullet-type("", icon-bullet);
 
-  &:before {
+  &::before {
     font-size: 4px;
   }
 }
@@ -34,18 +34,15 @@ ol {
     // This selected every adjacent <li>
     // from the 10th and overrides the
     // content property of each
-    &:nth-child(10n) ~ li:before,
-    &:nth-child(10n):before {
+    &:nth-child(10n) ~ li::before,
+    &:nth-child(10n)::before {
       content: counter(list);
     }
 
   }
 }
 
-ul ol {
-  padding-top: 0;
-}
-
+ul ol,
 ol ul {
   padding-top: 0;
 }
@@ -54,13 +51,13 @@ ol ul {
 /*==========  LIST LINKS  ==========*/
 
 ul.list-links {
-  li:before {
+  li::before {
     display: none;
   }
   a {
     @include bullet-type("", icon-bullet);
 
-    &:before {
+    &::before {
       font-size: 4px;
     }
 
@@ -80,7 +77,7 @@ ul.list-links {
 
 ol.list-links {
   li {
-    &:before {
+    &::before {
       display: none;
     }
 
@@ -90,14 +87,14 @@ ol.list-links {
       font-weight: 300;
     }
 
-    &:nth-child(10n) ~ li a:before,
-    &:nth-child(10n) a:before {
+    &:nth-child(10n) ~ li a::before,
+    &:nth-child(10n) a::before {
       content: counter(list);
     }
   }
 
   &.list-links--secondary {
-    a:before {
+    a::before {
       display: none;
     }
   }
@@ -122,7 +119,7 @@ ol.list-links {
     padding-top: 0;
     padding-left: 0;
 
-    &:before {
+    &::before {
       display: none
     }
 
@@ -134,7 +131,7 @@ ol.list-links {
     display: inline-block;
     padding-left: 16px;
 
-    &:before {
+    &::before {
       font-size: 4px;
     }
   }
@@ -276,8 +273,8 @@ ol.list-links {
     padding-left: 0;
   }
 
-  &.list-links a:before,
-  & li:before {
+  &.list-links a::before,
+  & li::before {
     display: none !important; // Fine to use !important when we are forcing an override
   }
 }
