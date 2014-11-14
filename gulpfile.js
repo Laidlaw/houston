@@ -26,6 +26,7 @@ var del = require('del');
 var runSequence = require('run-sequence');
 var browserSync = require('browser-sync');
 var pagespeed = require('psi');
+var deploy = require("gulp-gh-pages");
 var reload = browserSync.reload;
 
 var AUTOPREFIXER_BROWSERS = [
