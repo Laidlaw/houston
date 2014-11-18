@@ -26,6 +26,7 @@ var del = require('del');
 var runSequence = require('run-sequence');
 var browserSync = require('browser-sync');
 var pagespeed = require('psi');
+var imagemin = require('gulp-imagemin');
 var deploy = require("gulp-gh-pages");
 var reload = browserSync.reload;
 
@@ -57,7 +58,7 @@ gulp.task('images', function () {
       progressive: true,
       interlaced: true
     })))
-    .pipe(gulp.dest('dist/images'))
+    .pipe(gulp.dest('dist/images/'))
     .pipe($.size({title: 'images'}));
 });
 
