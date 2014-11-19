@@ -40,7 +40,7 @@
   $colorGrayLight: #eeeeee !default;
   $colorGrayDark: #404040 !default;
 
-  $colorText: $colorGrayDark !default;
+  $colorText: $colorYellow !default;
   $colorHighlight: $colorBlue !default;
   $colorWarning: $colorYellowSecondary !default;
   $colorMuted: $colorGray !default;
@@ -57,7 +57,7 @@
 
   // Defining font family
   $fontDefault: Helvetica, Arial, sans-serif !default;
-  $fontHighlight: 'Roboto Condensed', Helvetica, sans-serif !default;
+  $fontHighlight: 'Montserrat', Helvetica, sans-serif !default;
   $fontIcon: 'icons' !default;
 
   // Defining font sizes
